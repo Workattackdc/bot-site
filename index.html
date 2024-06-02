@@ -69,8 +69,8 @@
             padding: 20px;
             margin: 20px 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background: linear-gradient(to bottom, #007bff, #0056b3);
-            color: #fff;
+            background-color: #fff;
+            color: #333; /* Textfarbe auf schwarz setzen */
         }
         .card h3 {
             margin-top: 0;
@@ -90,17 +90,7 @@
     </style>
 </head>
 <body>
-    <header>
-        <img src="https://cdn.discordapp.com/avatars/1187433616142245898/90907a47ea0598b1e17ebe995f44bcce.png" alt="Midnight System Avatar">
-        <h1>Willkommen zu Midnight System</h1>
-    </header>
-    <nav>
-        <a href="#home" class="active" onclick="showSection('home')">Home</a>
-        <a href="#features" onclick="showSection('features')">Features</a>
-        <a href="#commands" onclick="showSection('commands')">Commands</a>
-        <a href="#invite" onclick="showSection('invite')">Invite</a>
-    </nav>
-    <main>
+        <main>
         <section id="home" class="active card">
             <h2>Über Midnight System</h2>
             <p>Midnight System ist ein fortschrittlicher AI-Bot, der deinen Discord-Server auf vielfältige Weise verbessern kann. Ob du nach automatisierter Moderation, Unterhaltung oder nützlichen Tools suchst, Midnight System hat alles, was du brauchst.</p>
@@ -126,18 +116,6 @@
             <p>Midnight System bietet eine Vielzahl von nützlichen Funktionen, um deinen Discord-Server zu bereichern. Mit der Fähigkeit, Bilder zu generieren, komplexe mathematische Aufgaben zu lösen und sogar einfache Programme zu erstellen, ist unser Bot der perfekte Assistent für jede Community.</p>
             <p>Dank unserer fortschrittlichen AI-Technologie kannst du sicher sein, dass Midnight System immer aktuelle und relevante Informationen liefert. Probiere es aus und erlebe die Vielfalt der Funktionen selbst!</p>
         </section>
-        <section id="commands" class="card">
-            <h2>Commands</h2>
-            <p>Hier sind einige der wichtigsten Befehle, die du nutzen kannst:</p>
-            <ul>
-                <li><code>/activate</code> - Aktiviert die AI für den jetzigen Channel</li>
-                <li><code>/config</code> - Zeigt die Bot-Konfiguration an</li>
-                <li><code>/deactivate</code> - Deaktiviert die AI für den jetzigen Channel</li>
-                <li><code>/image</code> - Erstellt ein Bild</li>
-                <li><code>/link</code> - Gibt den Bot-Link</li>
-                <li><code>/reset</code> - Löscht die Gedanken vom Bot in dem Server</li>
-            </ul>
-            <p>Mit diesen Befehlen kannst du die volle Kontrolle über Midnight System übernehmen. Aktiviere und deaktive
         <section id="commands" class="card">
             <h2>Commands</h2>
             <p>Hier sind einige der wichtigsten Befehle, die du nutzen kannst:</p>
@@ -181,3 +159,5 @@
     </script>
 </body>
 </html>
+
+
