@@ -170,4 +170,29 @@
         <section id="invite" class="card">
             <h2>Invite</h2>
             <p>Füge Midnight System zu deinem Discord-Server hinzu und entdecke die Vorteile eines AI-gesteuerten Bots:</p>
-            <a href="https://discord.com/oauth2/authorize?client_id=118743361614
+            <a href="https://discord.com/oauth2/authorize?client_id=1187433616142245898" class="button">Hier klicken</a>
+<p>Unser Bot bietet eine Vielzahl von Funktionen, die deine Community bereichern werden. Mit dem einfachen Einladungsprozess kannst du sofort loslegen und die umfangreichen Möglichkeiten von Midnight System nutzen.</p>
+            <p>Verbinde dich mit uns und werde Teil einer wachsenden Community, die die Vorteile modernster AI-Technologie nutzt. Wir freuen uns darauf, deinen Server zu unterstützen!</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Midnight System. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script>
+        function showSection(id) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+
+            var links = document.querySelectorAll('nav a');
+            links.forEach(function(link) {
+                link.classList.remove('active');
+            });
+            document.querySelector('nav a[href="#' + id + '"]').classList.add('active');
+        }
+    </script>
+</body>
+</html>
