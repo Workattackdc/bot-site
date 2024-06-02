@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mein Discord Bot</title>
+    <title>Midnight System - Dein AI Discord Bot</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -28,9 +28,16 @@
             color: #ff0000;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #333;
         }
         main {
             padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
         }
         footer {
             background-color: #ff0000; /* Rot */
@@ -41,11 +48,33 @@
             bottom: 0;
             width: 100%;
         }
+        .card {
+            border: 1px solid #ff0000;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card h3 {
+            margin-top: 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #ff0000;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #cc0000;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Willkommen zu meinem Discord Bot</h1>
+        <h1>Willkommen zu Midnight System</h1>
     </header>
     <nav>
         <a href="#home">Home</a>
@@ -54,36 +83,39 @@
         <a href="#contact">Kontakt</a>
     </nav>
     <main>
-        <section id="home">
-            <h2>Über den Bot</h2>
-            <p>Dieser Bot bietet viele tolle Funktionen, die deinen Discord-Server verbessern werden.</p>
+        <section id="home" class="card">
+            <h2>Über Midnight System</h2>
+            <p>Midnight System ist ein fortschrittlicher AI-Bot, der deinen Discord-Server auf vielfältige Weise verbessern kann.</p>
+            <a href="#features" class="button">Mehr erfahren</a>
         </section>
-        <section id="features">
+        <section id="features" class="card">
             <h2>Features</h2>
             <ul>
                 <li>Automatisierte Moderation</li>
                 <li>Musik-Streaming</li>
                 <li>Spielstatistiken</li>
+                <li>AI-gesteuerte Konversationen</li>
                 <li>Und vieles mehr!</li>
             </ul>
         </section>
-        <section id="commands">
+        <section id="commands" class="card">
             <h2>Commands</h2>
             <p>Hier sind einige der wichtigsten Befehle, die du nutzen kannst:</p>
             <ul>
                 <li><code>!help</code> - Zeigt die Hilfeseite an</li>
                 <li><code>!play [song]</code> - Spielt einen Song ab</li>
                 <li><code>!ban [user]</code> - Bannt einen Benutzer</li>
+                <li><code>!chat [Nachricht]</code> - Führt eine AI-gesteuerte Konversation</li>
                 <li>Und viele weitere!</li>
             </ul>
         </section>
-        <section id="contact">
+        <section id="contact" class="card">
             <h2>Kontakt</h2>
-            <p>Bei Fragen oder Problemen, kontaktiere uns unter: <a href="mailto:support@deindiscordbot.de">support@deindiscordbot.de</a></p>
+            <p>Bei Fragen oder Problemen, kontaktiere uns unter: <a href="mailto:support@midnight-system.de">support@midnight-system.de</a></p>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Mein Discord Bot. Alle Rechte vorbehalten.</p>
+        <p>&copy; 2024 Midnight System. Alle Rechte vorbehalten.</p>
     </footer>
 </body>
 </html>
