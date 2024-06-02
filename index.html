@@ -7,40 +7,47 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #fff;
+            background-color: #f4f4f4;
             color: #333;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #ff0000; /* Rot */
+            background-color: #1e1e1e;
             color: #fff;
             padding: 20px;
             text-align: center;
         }
         nav {
-            background-color: #ffcccc; /* Hellrot */
+            background-color: #2a2a2a;
+            display: flex;
+            justify-content: center;
             padding: 10px;
-            text-align: center;
         }
         nav a {
-            margin: 0 10px;
-            color: #ff0000;
+            margin: 0 15px;
+            padding: 10px 20px;
+            color: #ccc;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
         }
-        nav a:hover {
-            color: #333;
+        nav a:hover, nav a.active {
+            background-color: #444;
+            color: #fff;
         }
         main {
             padding: 20px;
         }
         section {
-            margin-bottom: 20px;
+            display: none;
+        }
+        section.active {
+            display: block;
         }
         footer {
-            background-color: #ff0000; /* Rot */
+            background-color: #1e1e1e;
             color: #fff;
             text-align: center;
             padding: 10px;
@@ -49,11 +56,12 @@
             width: 100%;
         }
         .card {
-            border: 1px solid #ff0000;
+            border: 1px solid #ccc;
             border-radius: 10px;
             padding: 20px;
-            margin: 10px 0;
+            margin: 20px 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
         }
         .card h3 {
             margin-top: 0;
@@ -62,13 +70,13 @@
             display: inline-block;
             padding: 10px 20px;
             color: #fff;
-            background-color: #ff0000;
+            background-color: #007bff;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s;
         }
         .button:hover {
-            background-color: #cc0000;
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -77,16 +85,16 @@
         <h1>Willkommen zu Midnight System</h1>
     </header>
     <nav>
-        <a href="#home">Home</a>
-        <a href="#features">Features</a>
-        <a href="#commands">Commands</a>
-        <a href="#contact">Kontakt</a>
+        <a href="#home" class="active" onclick="showSection('home')">Home</a>
+        <a href="#features" onclick="showSection('features')">Features</a>
+        <a href="#commands" onclick="showSection('commands')">Commands</a>
+        <a href="#contact" onclick="showSection('contact')">Kontakt</a>
     </nav>
     <main>
-        <section id="home" class="card">
+        <section id="home" class="active card">
             <h2>Über Midnight System</h2>
             <p>Midnight System ist ein fortschrittlicher AI-Bot, der deinen Discord-Server auf vielfältige Weise verbessern kann.</p>
-            <a href="#features" class="button">Mehr erfahren</a>
+            <a href="#features" class="button" onclick="showSection('features')">Mehr erfahren</a>
         </section>
         <section id="features" class="card">
             <h2>Features</h2>
@@ -117,5 +125,21 @@
     <footer>
         <p>&copy; 2024 Midnight System. Alle Rechte vorbehalten.</p>
     </footer>
+
+    <script>
+        function showSection(id) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+
+            var links = document.querySelectorAll('nav a');
+            links.forEach(function(link) {
+                link.classList.remove('active');
+            });
+            document.querySelector('nav a[href="#' + id + '"]').classList.add('active');
+        }
+    </script>
 </body>
 </html>
